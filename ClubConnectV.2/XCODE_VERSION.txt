@@ -1,0 +1,5 @@
+Target development environment: Xcode 26.1.1
+Swift compiler included with Xcode 26.1.1: Swift 6.2.1
+Project language mode: Swift 6
+SDK expected: iOS 26.1
+Minimum iOS deployment target: iOS 17.0

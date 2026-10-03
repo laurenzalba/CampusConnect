@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NAV-001">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SCN-NAV">
+            <objects>
+                <navigationController id="NAV-001" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV-BAR">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WELCOME-VC" kind="relationship" relationship="rootViewController" id="SEG-ROOT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-NAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1050" y="70"/>
+        </scene>
+
+        <!--Welcome View Controller-->
+        <scene sceneID="SCN-WELCOME">
+            <objects>
+                <viewController id="WELCOME-VC" customClass="WelcomeViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WELCOME-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LOGO-IMAGE">
+                                <rect key="frame" x="152.5" y="123" width="88" height="88"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="C-LOGO-W"/>
+                                    <constraint firstAttribute="height" constant="88" id="C-LOGO-H"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TITLE-LABEL">
+                                <rect key="frame" x="66" y="223" width="261" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your people. Join a campus club today." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUBTITLE-LABEL">
+                                <rect key="frame" x="24" y="260" width="345" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAME-PROMPT">
+                                <rect key="frame" x="24" y="324" width="345" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAME-FIELD">
+                                <rect key="frame" x="24" y="350" width="345" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="C-NAME-H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send me meeting reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REMINDER-LABEL">
+                                <rect key="frame" x="24" y="414" width="225" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="REMINDER-SWITCH">
+                                <rect key="frame" x="318" y="414" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemGreenColor"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOINING AS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROLE-PROMPT">
+                                <rect key="frame" x="24" y="465" width="345" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ROLE-SEGMENT">
+                                <rect key="frame" x="24" y="491" width="345" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="C-ROLE-H"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Member"/>
+                                    <segment title="Officer"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOIN-BUTTON">
+                                <rect key="frame" x="24" y="551" width="345" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C-JOIN-H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Join the Club">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="joinButtonTapped:" destination="WELCOME-VC" eventType="touchUpInside" id="ACT-JOIN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAFE-WELCOME"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LOGO-IMAGE" firstAttribute="top" secondItem="SAFE-WELCOME" secondAttribute="top" constant="20" id="C1"/>
+                            <constraint firstItem="LOGO-IMAGE" firstAttribute="centerX" secondItem="SAFE-WELCOME" secondAttribute="centerX" id="C2"/>
+                            <constraint firstItem="TITLE-LABEL" firstAttribute="top" secondItem="LOGO-IMAGE" secondAttribute="bottom" constant="12" id="C3"/>
+                            <constraint firstItem="TITLE-LABEL" firstAttribute="centerX" secondItem="SAFE-WELCOME" secondAttribute="centerX" id="C4"/>
+                            <constraint firstItem="TITLE-LABEL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SAFE-WELCOME" secondAttribute="leading" constant="24" id="C5"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TITLE-LABEL" secondAttribute="trailing" constant="24" id="C6"/>
+                            <constraint firstItem="SUBTITLE-LABEL" firstAttribute="top" secondItem="TITLE-LABEL" secondAttribute="bottom" constant="6" id="C7"/>
+                            <constraint firstItem="SUBTITLE-LABEL" firstAttribute="leading" secondItem="SAFE-WELCOME" secondAttribute="leading" constant="24" id="C8"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="trailing" secondItem="SUBTITLE-LABEL" secondAttribute="trailing" constant="24" id="C9"/>
+                            <constraint firstItem="NAME-PROMPT" firstAttribute="top" secondItem="SUBTITLE-LABEL" secondAttribute="bottom" constant="20" id="C10"/>
+                            <constraint firstItem="NAME-PROMPT" firstAttribute="leading" secondItem="SAFE-WELCOME" secondAttribute="leading" constant="24" id="C11"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="trailing" secondItem="NAME-PROMPT" secondAttribute="trailing" constant="24" id="C12"/>
+                            <constraint firstItem="NAME-FIELD" firstAttribute="top" secondItem="NAME-PROMPT" secondAttribute="bottom" constant="8" id="C13"/>
+                            <constraint firstItem="NAME-FIELD" firstAttribute="leading" secondItem="SAFE-WELCOME" secondAttribute="leading" constant="24" id="C14"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="trailing" secondItem="NAME-FIELD" secondAttribute="trailing" constant="24" id="C15"/>
+                            <constraint firstItem="REMINDER-LABEL" firstAttribute="top" secondItem="NAME-FIELD" secondAttribute="bottom" constant="16" id="C16"/>
+                            <constraint firstItem="REMINDER-LABEL" firstAttribute="leading" secondItem="SAFE-WELCOME" secondAttribute="leading" constant="24" id="C17"/>
+                            <constraint firstItem="REMINDER-SWITCH" firstAttribute="centerY" secondItem="REMINDER-LABEL" secondAttribute="centerY" id="C18"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="trailing" secondItem="REMINDER-SWITCH" secondAttribute="trailing" constant="24" id="C19"/>
+                            <constraint firstItem="REMINDER-SWITCH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="REMINDER-LABEL" secondAttribute="trailing" constant="12" id="C20"/>
+                            <constraint firstItem="ROLE-PROMPT" firstAttribute="top" secondItem="REMINDER-LABEL" secondAttribute="bottom" constant="20" id="C21"/>
+                            <constraint firstItem="ROLE-PROMPT" firstAttribute="leading" secondItem="SAFE-WELCOME" secondAttribute="leading" constant="24" id="C22"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="trailing" secondItem="ROLE-PROMPT" secondAttribute="trailing" constant="24" id="C23"/>
+                            <constraint firstItem="ROLE-SEGMENT" firstAttribute="top" secondItem="ROLE-PROMPT" secondAttribute="bottom" constant="8" id="C24"/>
+                            <constraint firstItem="ROLE-SEGMENT" firstAttribute="leading" secondItem="SAFE-WELCOME" secondAttribute="leading" constant="24" id="C25"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="trailing" secondItem="ROLE-SEGMENT" secondAttribute="trailing" constant="24" id="C26"/>
+                            <constraint firstItem="JOIN-BUTTON" firstAttribute="top" secondItem="ROLE-SEGMENT" secondAttribute="bottom" constant="24" id="C27"/>
+                            <constraint firstItem="JOIN-BUTTON" firstAttribute="leading" secondItem="SAFE-WELCOME" secondAttribute="leading" constant="24" id="C28"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="trailing" secondItem="JOIN-BUTTON" secondAttribute="trailing" constant="24" id="C29"/>
+                            <constraint firstItem="SAFE-WELCOME" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JOIN-BUTTON" secondAttribute="bottom" constant="16" id="C30"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Campus Club Connect" id="NAVITEM-WELCOME"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="NAME-FIELD" id="OUT-NAME"/>
+                        <outlet property="reminderSwitch" destination="REMINDER-SWITCH" id="OUT-SWITCH"/>
+                        <outlet property="roleSegmentedControl" destination="ROLE-SEGMENT" id="OUT-ROLE"/>
+                        <outlet property="titleLabel" destination="TITLE-LABEL" id="OUT-TITLE"/>
+                        <segue destination="CONFIRM-VC" kind="show" identifier="ShowConfirmationSegue" id="SEG-CONFIRM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-WELCOME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220" y="70"/>
+        </scene>
+
+        <!--Confirmation View Controller-->
+        <scene sceneID="SCN-CONFIRM">
+            <objects>
+                <viewController id="CONFIRM-VC" customClass="ConfirmationViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CONFIRM-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CHECK-IMAGE">
+                                <rect key="frame" x="156.5" y="143" width="80" height="80"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="C-CHECK-W"/>
+                                    <constraint firstAttribute="height" constant="80" id="C-CHECK-H"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MESSAGE-CARD">
+                                <rect key="frame" x="24" y="247" width="345" height="122"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your confirmation will appear here." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MESSAGE-LABEL">
+                                        <rect key="frame" x="16" y="16" width="313" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="MESSAGE-LABEL" firstAttribute="top" secondItem="MESSAGE-CARD" secondAttribute="top" constant="16" id="C-M1"/>
+                                    <constraint firstItem="MESSAGE-LABEL" firstAttribute="leading" secondItem="MESSAGE-CARD" secondAttribute="leading" constant="16" id="C-M2"/>
+                                    <constraint firstAttribute="trailing" secondItem="MESSAGE-LABEL" secondAttribute="trailing" constant="16" id="C-M3"/>
+                                    <constraint firstAttribute="bottom" secondItem="MESSAGE-LABEL" secondAttribute="bottom" constant="16" id="C-M4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the Back button above to change your registration." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HELP-LABEL">
+                                <rect key="frame" x="36" y="393" width="321" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAFE-CONFIRM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CHECK-IMAGE" firstAttribute="top" secondItem="SAFE-CONFIRM" secondAttribute="top" constant="40" id="CC1"/>
+                            <constraint firstItem="CHECK-IMAGE" firstAttribute="centerX" secondItem="SAFE-CONFIRM" secondAttribute="centerX" id="CC2"/>
+                            <constraint firstItem="MESSAGE-CARD" firstAttribute="top" secondItem="CHECK-IMAGE" secondAttribute="bottom" constant="24" id="CC3"/>
+                            <constraint firstItem="MESSAGE-CARD" firstAttribute="leading" secondItem="SAFE-CONFIRM" secondAttribute="leading" constant="24" id="CC4"/>
+                            <constraint firstItem="SAFE-CONFIRM" firstAttribute="trailing" secondItem="MESSAGE-CARD" secondAttribute="trailing" constant="24" id="CC5"/>
+                            <constraint firstItem="HELP-LABEL" firstAttribute="top" secondItem="MESSAGE-CARD" secondAttribute="bottom" constant="24" id="CC6"/>
+                            <constraint firstItem="HELP-LABEL" firstAttribute="leading" secondItem="SAFE-CONFIRM" secondAttribute="leading" constant="36" id="CC7"/>
+                            <constraint firstItem="SAFE-CONFIRM" firstAttribute="trailing" secondItem="HELP-LABEL" secondAttribute="trailing" constant="36" id="CC8"/>
+                            <constraint firstItem="SAFE-CONFIRM" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HELP-LABEL" secondAttribute="bottom" constant="24" id="CC9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Confirmation" id="NAVITEM-CONFIRM"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="MESSAGE-LABEL" id="OUT-MESSAGE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-CONFIRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.3.fill" catalog="system" width="128" height="80"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.2352941176" green="0.2352941176" blue="0.262745098" alpha="0.6" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.2039215686" green="0.7803921569" blue="0.3490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
